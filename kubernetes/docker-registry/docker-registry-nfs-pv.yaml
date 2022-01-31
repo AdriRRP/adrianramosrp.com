@@ -8,8 +8,9 @@ spec:
     storage: 50Gi
   accessModes:
   - ReadWriteMany
+  mountOptions:
+    - hard
+    - nfsvers=4.1
   nfs:
     server: rpi4-master
-    path: "/data/"
-  mountOptions:
-  - nfsvers=4.2
+    path: "/data/public/docker-registry"
